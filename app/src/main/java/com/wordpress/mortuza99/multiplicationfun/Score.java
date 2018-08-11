@@ -1,6 +1,8 @@
 package com.wordpress.mortuza99.multiplicationfun;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,10 @@ import android.widget.Toast;
 
 public class Score extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    public static final String SHARED_NAME = "multiplicationFunSharedPreferences";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +23,24 @@ public class Score extends AppCompatActivity {
 
         final String appDownloadLink = "";
         final String score = getIntent().getStringExtra("SCORE");
+
+        // HIGH SCORE SAVE IN SHARED Preferences
+        TextView highScoreText = findViewById(R.id.highScoreText);
+        sharedPreferences = getSharedPreferences(SHARED_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        String highscore = sharedPreferences.getString("highscore", "0");
+        if (Integer.parseInt(highscore) < Integer.parseInt(score)) {
+            editor.putString("highscore", String.valueOf(score))
+                    .apply();
+            showToast("YOU MADE HIGH SCORE !!");
+            highscore = score;
+        }
+        highScoreText.setText(highscore);
+
+
         TextView scoreText = findViewById(R.id.scoreText);
         scoreText.setText(score);
+
 
         ImageButton btnShare = findViewById(R.id.btnScoreShare);
         ImageButton btnPlayAgain = findViewById(R.id.btnPlayAgain);

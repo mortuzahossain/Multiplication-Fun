@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private int seconds = 60;
     private TextView timeText, scoreText, questionText, ansText;
 
-    Button btnRight, btnWrong;
-
     private boolean isResultCorrect;
     private int score = 0;
     private boolean stopTimer = false;
@@ -32,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         scoreText = findViewById(R.id.scoreText);
         questionText = findViewById(R.id.questionText);
         ansText = findViewById(R.id.ansText);
-        btnRight = findViewById(R.id.btnRight);
-        btnWrong = findViewById(R.id.btnWrong);
+        Button btnRight = findViewById(R.id.btnRight);
+        Button btnWrong = findViewById(R.id.btnWrong);
 
         btnRight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Generating Question
     private void generateRandomQuestion() {
         isResultCorrect = true;
         Random random = new Random();
@@ -84,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         int result = a * b;
         float f = random.nextFloat();
         if (f > 0.5f) {
-            result = random.nextInt(100);
+            result = random.nextInt(result + 3);
             isResultCorrect = false;
         }
         questionText.setText(String.format("%s * %s", String.valueOf(a), String.valueOf(b)));
@@ -96,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             score += 5;
         } else {
             Vibrator vibrator = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
+            assert vibrator != null;
             vibrator.vibrate(100);
         }
         scoreText.setText(String.format("%s%s", getString(R.string.score_5), String.valueOf(score)));
