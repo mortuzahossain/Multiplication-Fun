@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "92515245727",
+    "firebase_url": "https://multiplicationfun-310f2.firebaseio.com",
+    "project_id": "multiplicationfun-310f2",
+    "storage_bucket": "multiplicationfun-310f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92515245727:android:64a76cd11b862bca",
+        "android_client_info": {
+          "package_name": "com.wordpress.mortuza99.multiplicationfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92515245727-0bb12sjgf52kg9cl1h5c3tp8tnlk7ac1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wordpress.mortuza99.multiplicationfun",
+            "certificate_hash": "691e4af5e5b161877c756126c25b451aed3a3c75"
+          }
+        },
+        {
+          "client_id": "92515245727-s2a1h7sn6pr3t037d1alcriaoll72mk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1Y2FHP2_MrYE6HT8vmPgSvwKdtfn2zOk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92515245727-s2a1h7sn6pr3t037d1alcriaoll72mk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.wordpress.mortuza99.multiplicationfun;
+package com.wordpress.mortuza99.multiplicationfun.ui;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -8,7 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.wordpress.mortuza99.multiplicationfun.R;
 
 import java.util.Random;
 

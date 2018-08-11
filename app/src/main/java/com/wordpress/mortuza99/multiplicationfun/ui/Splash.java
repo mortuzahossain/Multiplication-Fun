@@ -1,8 +1,10 @@
-package com.wordpress.mortuza99.multiplicationfun;
+package com.wordpress.mortuza99.multiplicationfun.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.wordpress.mortuza99.multiplicationfun.R;
 
 public class Splash extends AppCompatActivity {
 
