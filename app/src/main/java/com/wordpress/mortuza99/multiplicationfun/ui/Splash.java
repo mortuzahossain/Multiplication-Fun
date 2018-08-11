@@ -27,7 +27,7 @@ public class Splash extends AppCompatActivity {
 
         rotateAnimation.setInterpolator(new LinearInterpolator());
         rotateAnimation.setRepeatCount(Animation.INFINITE);
-        rotateAnimation.setDuration(1000);
+     git    rotateAnimation.setDuration(1000);
         loaderImage.startAnimation(rotateAnimation);
 
         Thread t = new Thread() {
