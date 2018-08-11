@@ -2,8 +2,8 @@
     <string name="app_name">MultiplicationFun</string>
     <string name="rightText">Right</string>
     <string name="wrongText">Wrong</string>
-    <string name="time_30s">Time: 30s</string>
-    <string name="score_5">Score: 5</string>
+    <string name="time_30s">Time: </string>
+    <string name="score_5">Score: 0</string>
     <string name="_2_2">2 * 2</string>
     <string name="_2">= 2</string>
     <string name="your_score">Your Score</string>
